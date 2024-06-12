@@ -26,7 +26,6 @@ public class TextManager {
 
     public void guardarTexto(String textito) {
         File file = new File(nombreFichero);
-        file.getParentFile().mkdirs();
 
         try (FileWriter writer = new FileWriter(file)) {
             writer.write(textito);
@@ -53,5 +52,20 @@ public class TextManager {
             System.out.println("El texto no funchiona.");
             e.printStackTrace();
         }
+    }
+
+    public String leerYObtenerTexto(String nombreFichero) {
+        StringBuilder contenido = new StringBuilder();
+        try (FileReader reader = new FileReader(nombreFichero);
+                BufferedReader bufferedReader = new BufferedReader(reader)) {
+            int character;
+            while ((character = bufferedReader.read()) != -1) {
+                contenido.append((char) character);
+            }
+        } catch (IOException e) {
+            System.out.println("No se pudo leer el archivo.");
+            e.printStackTrace();
+        }
+        return contenido.toString();
     }
 }
