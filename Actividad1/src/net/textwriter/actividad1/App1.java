@@ -8,7 +8,7 @@ public class App1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String outputFilePath = "Actividad1/files/output/outputTextito.txt";
-        TextManager manager = new TextManager("", outputFilePath);
+        TextManager manager = new TextManager(outputFilePath);
 
         String inputTextito = "";
         while (true) {

@@ -7,11 +7,10 @@ import java.io.File;
 import java.io.IOException;
 
 public class TextManager {
-    private String textito;
+
     private final String nombreFichero;
 
-    public TextManager(String textito, String nombreFichero) {
-        this.textito = textito;
+    public TextManager(String nombreFichero) {
         this.nombreFichero = nombreFichero;
     }
 

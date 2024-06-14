@@ -9,8 +9,8 @@ public class App3 {
         String rutaArchivo2 = "Actividad1/files/input/inputTextitoMerge.txt";
 
         // Crea instancias de TextManager para cada archivo con sus respectivas rutas
-        TextManager textManager1 = new TextManager("", rutaArchivo1);
-        TextManager textManager2 = new TextManager("", rutaArchivo2);
+        TextManager textManager1 = new TextManager(rutaArchivo1);
+        TextManager textManager2 = new TextManager(rutaArchivo2);
 
         // Lee contenido de cada archivo
         String contenidoArchivo1 = textManager1.leerYObtenerTexto(rutaArchivo1);
@@ -21,7 +21,7 @@ public class App3 {
                 + "- Contenido del fichero 2: " + contenidoArchivo2 + "\n" + "Hecho por Julio del Rosario";
 
         // Guardar el contenido concatenado en un nuevo archivo
-        TextManager textManagerNuevo = new TextManager(contenidoConcatenado,
+        TextManager textManagerNuevo = new TextManager(
                 "Actividad1/files/output/outputTextitoMerge.txt");
         textManagerNuevo.guardarTexto(contenidoConcatenado);
     }
